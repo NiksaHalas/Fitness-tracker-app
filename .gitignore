@@ -1,0 +1,26 @@
+# Ignoriši node_modules u svakom podfolderu
+**/node_modules/
+
+# Ignoriši log fajlove
+*.log
+
+# Ignoriši .DS_Store (macOS)
+.DS_Store
+
+# Ignoriši eventualne lokalne env fajlove
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ne ignorišemo .env fajlove (namerno ostavljeni)
+# Ako kasnije budeš želeo da ih ignorišeš, dodaj:
+# *.env
+
+# Ignoriši npm debug fajlove
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignoriši OS/system fajlove
+Thumbs.db

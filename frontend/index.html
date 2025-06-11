@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h1>FitTrack Pro</h1>
+        <p id="appMessage" class="message"></p> <div id="authSection" class="app-section">
+            <div id="authChoice" class="auth-choice-container">
+                <h2>Join or Sign In</h2>
+                <p>Start tracking your fitness journey today!</p>
+                <div class="auth-choice-buttons">
+                    <button id="showRegisterFormButton" class="btn btn-block">Register New Account</button>
+                    <button id="showLoginFormButton" class="btn btn-secondary btn-block">Login to Existing Account</button>
+                </div>
+            </div>
+
+            <div id="registerFormContainer" class="auth-form-wrapper hidden">
+                <div id="registerForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <label for="regUsername">Username:</label>
+                        <input type="text" id="regUsername" required placeholder="Choose a username">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password:</label>
+                        <input type="password" id="regPassword" required placeholder="Min. 8 characters">
+                    </div>
+                    <button id="registerButton" class="btn btn-block">Register</button>
+                    <p id="regMessage" class="message"></p>
+                    <button id="backToAuthChoiceFromRegister" class="btn-link">Back to options</button>
+                </div>
+            </div>
+            
+            <div id="loginFormContainer" class="auth-form-wrapper hidden">
+                <div id="loginForm" class="auth-form">
+                    <h2>Welcome Back!</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" required placeholder="Enter your password">
+                    </div>
+                    <button id="loginButton" class="btn btn-block">Login</button>
+                    <p id="loginMessage" class="message"></p>
+                    <button id="backToAuthChoiceFromLogin" class="btn-link">Back to options</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="userInfoSection" class="app-section hidden">
+            <h2>Welcome, <span id="loggedInUsername">User</span>!</h2>
+            <p>User ID: <span id="loggedInUserId">N/A</span></p>
+            <button id="logoutButton" class="btn btn-secondary">Logout</button>
+        </div>
+
+        <div id="addExerciseSection" class="app-section hidden">
+            <h2>Add New Exercise</h2>
+            <div class="form-group">
+                <label for="exName">Exercise Name:</label>
+                <input type="text" id="exName" placeholder="e.g., Quantum Leap Training">
+            </div>
+            <div class="form-group">
+                <label for="exDesc">Description (optional):</label>
+                <input type="text" id="exDesc" placeholder="e.g., High-intensity interval training">
+            </div>
+            <div class="form-group">
+                <label for="exCat">Category (optional):</label>
+                <input type="text" id="exCat" placeholder="e.g., Advanced Cardio">
+            </div>
+            <button id="addExerciseButton" class="btn">Add Exercise Type</button>
+            <p id="addExMessage" class="message"></p>
+
+                        <h3 class="mt-4">Manage Existing Exercises</h3>
+            <ul id="existingExercisesList" class="existing-exercises-list">
+                <li class="no-exercises-message">No exercises defined yet.</li>
+            </ul>
+            <p id="deleteExMessage" class="message"></p> 
+            
+        </div>
+
+        <div id="workoutLogSection" class="app-section hidden">
+            <h2>Log New Workout</h2>
+            <div class="form-group">
+                <label for="exerciseSelect">Choose Exercise:</label>
+                <select id="exerciseSelect"></select>
+            </div>
+            <div class="form-group">
+                <label for="workoutDate">Date of Workout:</label>
+                <input type="date" id="workoutDate">
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="duration">Duration (minutes):</label>
+                    <input type="number" id="duration" placeholder="e.g., 30">
+                </div>
+                <div class="form-group">
+                    <label for="distance">Distance (km):</label>
+                    <input type="number" step="0.1" id="distance" placeholder="e.g., 5">
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="sets">Sets:</label>
+                    <input type="number" id="sets" placeholder="e.g., 3">
+                </div>
+                <div class="form-group">
+                    <label for="reps">Reps per Set:</label>
+                    <input type="number" id="reps" placeholder="e.g., 10">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" step="0.5" id="weight" placeholder="e.g., 50">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Notes (optional):</label>
+                <textarea id="notes" rows="4" placeholder="e.g., Felt strong today!"></textarea>
+            </div>
+            <button id="logWorkoutButton" class="btn btn-block">Log This Workout</button>
+            <p id="logWorkoutMessage" class="message"></p>
+
+            <h3>My Recent Workouts</h3>
+            <ul id="recentWorkoutsList">
+                </ul>
+        </div>
+
+        <div id="progressSection" class="app-section hidden">
+            <h2>Track Your Progress</h2>
+            <div class="form-group">
+                <label for="progressExerciseSelect">Select Exercise to Track:</label>
+                <select id="progressExerciseSelect"></select>
+            </div>
+            <button id="fetchProgressButton" class="btn">Show Progress Chart</button>
+            
+            <div class="chart-container">
+                <canvas id="progressChart"></canvas>
+            </div>
+            <p id="progressMessage" class="message"></p>
+        </div>
+    </div>
+</body>
+</html>
