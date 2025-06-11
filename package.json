@@ -3,7 +3,10 @@
   "devDependencies": {
     "concurrently": "^9.1.2"
   },
- "scripts": {
+  "scripts": {
     "dev": "concurrently \"npm start --prefix api-gateway\" \"npm start --prefix exercise-service\" \"npm start --prefix performance-entry-service\" \"npm start --prefix progress-service\" \"npm start --prefix user-service\" \"START_SERVICES=false npm start --prefix frontend\""
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }

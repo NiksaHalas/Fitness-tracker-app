@@ -267,6 +267,7 @@ select:focus {
     border-bottom: none; 
     color: var(--primary-color);
     margin-bottom: 10px;
+    margin-left: 350px;
 }
 .auth-choice-container p {
     margin-bottom: 25px;
