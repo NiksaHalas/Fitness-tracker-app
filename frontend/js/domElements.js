@@ -1,5 +1,3 @@
-// domElements.js
-
 // Ovde sakupljamo sve reference na HTML elemente koje koristimo u aplikaciji.
 
 // Elementi za registraciju korisnika

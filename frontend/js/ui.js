@@ -1,5 +1,3 @@
-// ui.js
-
 // Ovde su funkcije zadužene za vizuelni prikaz i interakciju sa korisnikom.
 
 import * as DOM from './domElements.js';

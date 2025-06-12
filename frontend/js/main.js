@@ -1,4 +1,3 @@
-// frontend/main.js
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');

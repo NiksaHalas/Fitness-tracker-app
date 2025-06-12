@@ -1,5 +1,3 @@
-// workouts.js
-
 // Ovaj fajl se bavi logovanjem novih treninga i prikazivanjem liste nedavnih treninga.
 
 import * as DOM from './domElements.js';

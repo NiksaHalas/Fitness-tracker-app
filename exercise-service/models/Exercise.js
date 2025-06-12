@@ -1,4 +1,3 @@
-// exercise-service/models/Exercise.js
 const mongoose = require('mongoose');
 
 // Ovde definišemo kako izgleda naš "Exercise" objekat u bazi.

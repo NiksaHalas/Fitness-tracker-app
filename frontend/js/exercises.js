@@ -1,5 +1,3 @@
-// exercises.js
-
 // Ovaj fajl sadrži logiku za sve operacije vezane za vežbe: dohvatanje, dodavanje i brisanje.
 
 import * as DOM from './domElements.js';

@@ -1,5 +1,3 @@
-// api.js
-
 // Ovaj fajl sadrži funkciju za slanje svih HTTP zahteva ka našem API Gateway-u.
 
 import { API_GATEWAY_URL } from './config.js';

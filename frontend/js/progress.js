@@ -1,5 +1,3 @@
-// progress.js
-
 // Ovaj fajl se fokusira na logiku za prikazivanje grafikona progresa.
 
 import * as DOM from './domElements.js';

@@ -1,5 +1,3 @@
-// auth.js
-
 // Ovaj fajl se bavi svim što ima veze sa autentifikacijom korisnika:  registracijom, prijavom i odjavom.
 
 

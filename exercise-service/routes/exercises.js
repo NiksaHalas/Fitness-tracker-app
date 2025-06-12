@@ -1,4 +1,3 @@
-// exercise-service/routes/exercises.js
 const express = require('express');
 const Exercise = require('../models/Exercise');
 const router = express.Router();

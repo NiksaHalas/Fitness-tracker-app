@@ -1,5 +1,3 @@
-// frontend/app.js
-
 import * as DOM from './domElements.js';
 import { displayMessage } from './ui.js';
 import { updateUI } from './ui.js';

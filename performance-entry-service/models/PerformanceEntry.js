@@ -1,4 +1,3 @@
-// performance-entry-service/models/PerformanceEntry.js
 const mongoose = require('mongoose');
 
 // Ovde definišemo kako izgleda naš "PerformanceEntry" objekat u bazi.

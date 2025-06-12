@@ -1,4 +1,3 @@
-// performance-entry-service/routes/entries.js
 const express = require('express');
 const PerformanceEntry = require('../models/PerformanceEntry');
 const router = express.Router();
