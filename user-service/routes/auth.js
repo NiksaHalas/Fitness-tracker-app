@@ -53,6 +53,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
+//Dohvatanje podataka o korisniku, Id-u  i provera JWT tokena
 
 router.get('/user/:id', async (req, res) => {
     const token = req.header('x-auth-token');
