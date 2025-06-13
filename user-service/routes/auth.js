@@ -53,9 +53,8 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// Get User (Protected route example - more robust auth middleware would be better)
+
 router.get('/user/:id', async (req, res) => {
-    // Basic token check - in a real app, use middleware to verify token
     const token = req.header('x-auth-token');
     if (!token) {
         return res.status(401).json({ msg: 'No token, authorization denied' });
